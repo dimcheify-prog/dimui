@@ -1,9 +1,14 @@
 {
-  "name": "dimui",
-  "version": "0.0.1",
+  "name": "@dimcheify-prog/dimui",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/dimcheify-prog"
+  },
+  "version": "0.0.2",
   "description": "UI library for React",
   "scripts": {
-    "rollup": "rollup -c"
+    "rollup": "rollup -c",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "author": "dimcheify",
   "license": "ISC",
@@ -11,10 +16,29 @@
     "@rollup/plugin-commonjs": "21.0.1",
     "@rollup/plugin-node-resolve": "13.0.6",
     "@rollup/plugin-typescript": "10.0.1",
+    "@storybook/addon-essentials": "^7.6.17",
+    "@storybook/addon-interactions": "^7.6.17",
+    "@storybook/addon-links": "^7.6.17",
+    "@storybook/addon-onboarding": "^1.0.11",
+    "@storybook/blocks": "^7.6.17",
+    "@storybook/preset-scss": "^1.0.3",
+    "@storybook/react": "^7.6.17",
+    "@storybook/react-webpack5": "^7.6.17",
+    "@storybook/test": "^7.6.17",
     "@types/react": "^18.2.61",
+    "css-loader": "^6.10.0",
     "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "rollup": "^2.60.0",
     "rollup-plugin-dts": "4.0.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.71.1",
+    "sass-loader": "^14.1.1",
+    "storybook": "^7.6.17",
+    "style-loader": "^3.3.4",
+    "tslib": "^2.6.2",
     "typescript": "4.4.4"
   },
   "main": "dist/cjs/index.js",
@@ -22,8 +46,5 @@
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts",
-  "dependencies": {
-    "tslib": "^2.6.2"
-  }
+  "types": "dist/index.d.ts"
 }

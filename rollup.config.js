@@ -21,14 +21,18 @@ export default [
       },
     ],
     plugins: [
+      peerDepsExternal(),
+
       resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
+      terser(),
     ],
   },
   {
     input: "dist/esm/types/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
     plugins: [dts()],
+    external: [/\.(scss|css)$/],
   },
 ];
