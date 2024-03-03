@@ -14,10 +14,6 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 export const HelloWorld = Template.bind({});
 // больше про args: https://storybook.js.org/docs/react/writing-stories/args
 HelloWorld.args = {
-  text: "Hello world!",
-};
-
-export const ClickMe = Template.bind({});
-ClickMe.args = {
-  text: "Click me!",
+  label: "Hello world!",
+  variant: "contained",
 };

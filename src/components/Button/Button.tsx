@@ -1,12 +1,22 @@
-import React from "react";
+import React, { MouseEvent, SyntheticEvent, useEffect } from "react";
+import styles from "./Button.module.css";
+
+type variantType = 'contained' | 'outlined';
+type colorType = 'primary' | 'secondary';
 
 export interface IButtonProps {
-  text: string;
+  label: string;
+  variant?: variantType;
+  color?: colorType
 }
 
-const Button = (props: IButtonProps) => {
+const Button = ({label, variant='contained', color='primary'}: IButtonProps) => {
+
   return (
-    <button>{props.text}</button>
+    <button>
+      <span></span>
+      <span>{label}</span>
+    </button>
   )
 }
 
